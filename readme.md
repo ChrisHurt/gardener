@@ -1,53 +1,48 @@
 # GARDENER
-
-## Link to app
-[Click here](https://powerful-beyond-84714.herokuapp.com)
-
-
-## Project Background and Brief
+> A home gardeners scheduling aid
 
 Project 3 is part of GA's Software Engineering Immersive Course. The goal of this project is to build, architect, design and collaboratively build an app within a small team.  
 
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-## Getting Started
+* [About the Project](#about-the-project)
+  * [Designed With](#designed-with)
+  * [Built With](#built-with)
+  * [Deployed With](#deployed-with)
+* [GA Project Requirements](#ga-project-requirements)
+* [Application Demo](#application-demo)
+* [Roadmap](#roadmap)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-- Clone this repository to your local machine through the command line.
-- Ensure you have the latest version of Ruby installed. 
 
+## About The Project
 
-### Non Tech Product Background
+The idea to build Gardener was spawned through watching a real-world scenario of a home gardener building a schedule in googlesheets to manage his garden filled with over 50 different plants. There are many websites filled with information on what people should grow and when they should sow their seeds, but no one-stop-shop to help gardeners to maintain their plants and provide proactive reminders on tasks that need to be undertaken throughout the year.
 
-The idea to build Gardener was spawn through watching a real-world scenario of a home gardener building a schedule in googlesheets to manage his garden filled with over 50 different plants. There are many websites filled with information on what people should grow and when they should sow their seeds, but no one-stop-shop to help gardeners to maintain their plants and provide proactive reminders on tasks that need to be undertaken throughout the year. 
-
-
-### Prerequisites
-
-- Install Dependencies:
-cd into the repository and then run "bundler" to install dependencies.
-
+## Designed With
+* [Figma](https://www.figma.com/)
 
 ## Built With
 
-- Ruby
-- Javascript
-- Active Record
-- Sinatra
-- BCrypt
-- PostgreSQL
-- JQuery
-- HTML, CSS
-- [Open Weather API](https://openweathermap.org/api)
+* [Ruby](https://www.ruby-lang.org/en/)
+* [Sinatra](http://sinatrarb.com/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [ActiveRecord](https://guides.rubyonrails.org/active_record_basics.html)
+* [JavaScript](https://www.javascript.com/)
+* [JQuery](https://jquery.com)
+* [Bcrypt](https://rubygems.org/gems/bcrypt/)
+* [Open Weather API](https://openweathermap.org/api)
 
-Other tooling used:
-- Trello
-- Heroku
-- GitHub
-- Figma
-- A notepad for wireframes :)
+## Deployed With
+
+* [Heroku](https://www.heroku.com/about)
 
 
-### Technical Requirements
-Your app must:
+### GA Project Requirements
+The application must:
 
 - Craft thoughtful user stories together, as a team
 - Write your code DRY and build your APIs RESTful.
@@ -55,8 +50,12 @@ Your app must:
 - Layout and style your front-end with clean & well-formatted CSS
 - Deploy your application online so it's publically accessible
 
+## Application Demo
+[Click here](https://gardeners-guide.herokuapp.com)
 
-## Approach taken 
+
+## Roadmap
+### Initial Planning & Workflow
 
 1. Brainstormed ideas for MVP of product, keeping track of out-of-scope ideas on trello. 
 2. Completed a draft workflow
@@ -64,10 +63,10 @@ Your app must:
 4. Planning and setup- ER diagram, database design, codebase and git repo.
 5. Team members identified a story that they wanted to take on. 
 6. Quickly decided on colour palette, branding and layout of to do and myplants page. 
-7. Systematically worked features, with frequent commits.
+7. Systematically worked on features, with frequent commits.
 
 
-## Unsolved or additional future requirements
+## Future Planning & Workflow
 
 - Ability for user to update password on user/edits page. 
 - Finalise frontend development for remaining pages
@@ -75,12 +74,24 @@ Your app must:
 - Add validation via Active Record & error messages
 - Check database for access on UPDATE/CREATE routes eg. Non-Current user can edit products is manually inputed.
 - Create modal to confirm deleting a product.
+- Add more data
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
 
 
-## Acknowledgments
+<!-- CONTACT -->
+## Contact
 
-Thanks Brad (aka. the gardener) for allowing us to take data from your googlesheets docs and your hours of research to extract this information into one place. 
+Chris Hurt - chrishcoding@gmail.com
 
-[Material design assets](https://material.io/resources/icons/?style=baseline) 
+Project Link: [https://github.com/ChrisHurt/Self_Assessment_System](https://github.com/ChrisHurt/Self_Assessment_System)
 
-[Icons8 assets](https://icons8.com/)
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* Thanks Brad (aka. the gardener) for allowing us to take data from your googlesheets docs and your hours of research to extract this information into one place. 
+* [Material design assets](https://material.io/resources/icons/?style=baseline)
+* [README template - othnieldrew](https://github.com/othneildrew/Best-README-Template)
+* [Icons8 assets](https://icons8.com/)
