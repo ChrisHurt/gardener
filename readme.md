@@ -87,7 +87,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Chris Hurt - chrishcoding@gmail.com
 
-Project Link: [https://github.com/ChrisHurt/Self_Assessment_System](https://github.com/ChrisHurt/Self_Assessment_System)
+Project Link: [https://github.com/ChrisHurt/gardener](https://github.com/ChrisHurt/gardener)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
