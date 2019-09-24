@@ -2,8 +2,10 @@
     <div class="invisible-spacer">
     </div>
     <div class="weather-div">
+        <%if current_user.location != nil%>
         <h1 class="weather-text">Current Weather</h1>
-        <img class="weather-icon">
+        <img class="weather-icon" latitude="<%if current_user.location != nil%><%=current_user.location.latitude%><%end%>" longitude="<%if current_user.location != nil%><%=current_user.location.longitude%><%end%>">
+        <%end%>
     </div>
 
     <div class="container-for-todo">
@@ -33,4 +35,9 @@
         </div>
     </div>
     <script src="/javascripts/todo.js"></script>
+    <%if current_user.location != nil%>
+    <script>
+        setWeatherIcon();
+    </script>
+    <% end %>
 </main>

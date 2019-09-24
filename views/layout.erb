@@ -30,9 +30,9 @@
     </div>
     <% if logged_in? %>
     <div class="top-nav-bottom-half">
-      <a href="/todos" class="menu-link" data-page="<% if session[:url] != 'todos'%>in<% end %>active"> <img class = "nav-images" src="icon_assets/TodoList.svg" alt="">  To Dos</a>
-      <a href="/my_plants" class="menu-link" data-page="<% if session[:url] != 'my_plants'%>in<% end %>active"><img class = "nav-images" src="icon_assets/Myplants.svg" alt="">  My Plants</a>
-      <a href="/mydetails" class="menu-link" data-page="<% if session[:url] != 'my_details'%>in<% end %>active"><img class = "nav-images" src="icon_assets/Myinfo.svg" alt="">  My Info</a>
+      <a href="/todos" class="menu-link" data-page="<% if session[:url] != 'todos'%>in<% end %>active"> <img class = "nav-images" src="/icon_assets/TodoList.svg" alt="">  To Dos</a>
+      <a href="/my_plants" class="menu-link" data-page="<% if session[:url] != 'my_plants'%>in<% end %>active"><img class = "nav-images" src="/icon_assets/Myplants.svg" alt="">  My Plants</a>
+      <a href="/mydetails" class="menu-link" data-page="<% if session[:url] != 'my_details'%>in<% end %>active"><img class = "nav-images" src="/icon_assets/Myinfo.svg" alt="">  My Info</a>
     </div>
     <% end %>
     
@@ -54,6 +54,7 @@
   <% session[:username_error] = nil %>
   <% session[:username_updated] = nil %>
   <% session[:plants_added] = nil %>
+  <% session[:plants_deleted] = nil %>
   <nav class="bottom-navigation"> 🌱 Handmade By CLSY - SEI20 </nav>
   <script src="/javascripts/application.js"></script>
 </body>

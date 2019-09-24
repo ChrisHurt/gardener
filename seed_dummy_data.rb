@@ -3,42 +3,24 @@ require_relative 'models/user'
 require_relative 'models/plant'
 require_relative 'models/task'
 require_relative 'models/todo'
+require_relative 'models/location'
 
-u = User.new()
-u.username = 'Sam'
-u.email = '1'
-u.password = '123'
-u.save
-
-u = User.new()  
-u.username = 'Yu-Ann'
-u.email = '2'
-u.password = '123'
-u.save
+def generateLocation user
+    location = Location.new
+    location.user_id = user.id
+    location.latitude = -45
+    location.longitude = 90
+    location.save
+    return
+end
 
 u = User.new()
 u.username = 'Chris'
-u.email = '3'
+u.email = '123@gmail.com'
 u.password = '123'
 u.save
 
-u = User.new()
-u.username = 'Latha'
-u.email = '4'
-u.password = '123'
-u.save
-
-u1 = User.new()
-u1.username = 'Jimremrermy Brantingtonington'
-u1.email = '1@1.com'
-u1.password = 'pudding'
-u1.save
-
-u2 = User.new()
-u2.username = 'Fenton Badgerton'
-u2.email = '2@2.com'
-u2.password = '123'
-u2.save
+generateLocation(u)
 
 # seed data for plants
 p1 = Plant.new
@@ -456,39 +438,39 @@ t1.save
 
 # Add u1 Todo
 
-p1.tasks.each do |task|
-    td = Todo.new
-    td.user_id = u1.id
-    td.plant_id = task.plant_id
-    td.task_id = task.id
-    td.complete = 0;
-    td.save
-end
+# p1.tasks.each do |task|
+#     td = Todo.new
+#     td.user_id = u1.id
+#     td.plant_id = task.plant_id
+#     td.task_id = task.id
+#     td.complete = 0;
+#     td.save
+# end
 
-p2.tasks.each do |task|
-    td = Todo.new
-    td.user_id = u1.id
-    td.plant_id = task.plant_id
-    td.task_id = task.id
-    td.complete = 0;
-    td.save
-end
+# p2.tasks.each do |task|
+#     td = Todo.new
+#     td.user_id = u1.id
+#     td.plant_id = task.plant_id
+#     td.task_id = task.id
+#     td.complete = 0;
+#     td.save
+# end
 
-p3.tasks.each do |task|
-    td = Todo.new
-    td.user_id = u1.id
-    td.plant_id = task.plant_id
-    td.task_id = task.id
-    td.complete = 0;
-    td.save
-end
-# Add u2 Todo
+# p3.tasks.each do |task|
+#     td = Todo.new
+#     td.user_id = u1.id
+#     td.plant_id = task.plant_id
+#     td.task_id = task.id
+#     td.complete = 0;
+#     td.save
+# end
+# # Add u2 Todo
 
-p1.tasks.each do |task|
-    td = Todo.new
-    td.user_id = u2.id
-    td.plant_id = task.plant_id
-    td.task_id = task.id
-    td.complete = 0;
-    td.save
-end
+# p1.tasks.each do |task|
+#     td = Todo.new
+#     td.user_id = u2.id
+#     td.plant_id = task.plant_id
+#     td.task_id = task.id
+#     td.complete = 0;
+#     td.save
+# end

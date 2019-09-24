@@ -79,10 +79,22 @@ var collectAndPopulateIncompleteTodos = () => {
   }).always(resetEventListeners);
 }
 
+// var setDefaultWeatherIcon = () => {
+//   $.ajax({
+//     dataType: 'json',
+//     url: "https://api.openweathermap.org/data/2.5/weather?q=Melbourne,aus&APPID=65d2c718348e35c15481b8dbf08c238d"
+//   }).done(function (res) {
+//     weatherIcon.setAttribute('src',`https://openweathermap.org/img/wn/${res.weather[0].icon}@2x.png`)
+//   })
+// }
+
 var setWeatherIcon = () => {
+  // weatherIcon.longitude
+  // console.log(givenLocation);
+  weatherIcon = document.querySelector('.weather-icon')
   $.ajax({
     dataType: 'json',
-    url: "https://api.openweathermap.org/data/2.5/weather?q=Coburg,aus&APPID=65d2c718348e35c15481b8dbf08c238d"
+    url: `https://api.openweathermap.org/data/2.5/weather?lat=${weatherIcon.getAttribute('latitude')}&lon=${weatherIcon.getAttribute('longitude')}&APPID=65d2c718348e35c15481b8dbf08c238d`
   }).done(function (res) {
     weatherIcon.setAttribute('src',`https://openweathermap.org/img/wn/${res.weather[0].icon}@2x.png`)
   })
@@ -114,7 +126,6 @@ acc1.addEventListener("click", function() {
     panelTwo.classList.add('closed');
   } else {
     panelOne.classList.add('closed');
-    // collectAndPopulateCompleteTodos();
   }
 });
 
@@ -137,4 +148,4 @@ var resetEventListeners = () => {
 }
 
 resetEventListeners();
-setWeatherIcon();
+// setDefaultWeatherIcon();

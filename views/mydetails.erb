@@ -2,11 +2,11 @@
 
     <div class="user_detail_errors">
     <% if session[:password_error] != nil %>
-        <div><%=session[:password_error]%></div>
+        <div><img class="nav-images" src="/icon_assets/info.svg" alt="Plants Added Information"><%=session[:password_error]%></div>
         <% session[:password_error] = nil%>
     <% end %>
     <% if session[:email_error] != nil %>
-        <div><%=session[:email_error]%></div>
+        <div><img class="nav-images" src="/icon_assets/info.svg" alt="Plants Added Information"><%=session[:email_error]%></div>
         <% session[:email_error] = nil %>
     <% end %>
     <% if @errors != nil %>
@@ -59,23 +59,18 @@
         </form>
 
         <form action="/users/<%=current_user.id%>/settings" method="post">
-                <h1 class= "my-info-header">MY GARDEN INFO</h1>
+                <h1 class= "my-info-header">MY GARDEN</h1>
             <input type="hidden" name="user_id" value="<%=current_user.id%>">
             <div class="label-input-pair">
-                <label for="">Garden Location</label>
-                <input type="text" name="garden_location" value="Some Setting">
-            </div>
-            <div class="label-input-pair">
-                
-                <label for="">Setting 2</label>
-                <input type="text" name="setting-1" value="Some Setting">
-            </div>
-            <div class="label-input-pair">
-                <label for="">Setting 3</label>
-                <input type="text" name="setting-1" value="Some Setting">
+                <label for="">Location</label>
+                <div class="geo-wrapper2">
+                    <input value="<%if current_user.location != nil%><%=current_user.location.latitude%><%end%>" step="1" min="-180" max ="180" class="mydetails-input latitude quarter-width-input" type="number" name='lat' placeholder="latitude">
+                    <input value="<%if current_user.location != nil%><%=current_user.location.longitude%><%end%>" step="1" min="-180" max ="180" class="mydetails-input longitude quarter-width-input" type="number" name='long' placeholder="longitude">
+                    <div type="button" class="mydetails-div">Current Location</div>
+                </div>
             </div>
             <button class = "update-info-btn">Update Settings</button>
         </form>
     </div>
-
+    <script src="/javascripts/location.js"></script>
 </main>
