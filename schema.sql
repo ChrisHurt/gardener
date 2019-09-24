@@ -38,3 +38,10 @@ CREATE TABLE todos (
     task_id INTEGER REFERENCES tasks ON DELETE CASCADE,
     complete INTEGER
 );
+
+CREATE TABLE locations (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users ON DELETE CASCADE,
+    latitude INTEGER,
+    longitude INTEGER
+);
