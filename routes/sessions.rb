@@ -29,13 +29,36 @@ end
   
 post "/createaccount" do
   user = User.new
-  user.username = params[:username]
-  user.email = params[:email]
+  # user.username = params[:username]
+  
+  if params[:username] != ''
+    user.username = params[:username]
+  else 
+    # This is a hard-coded solution, ideally I would filter through
+    # the error messages and select what I want to return
+    user.username = 'arbitrary name'
+  end
+  
+  if params[:email] != ''
+    user.email = params[:email]
+  else 
+    # This is a hard-coded solution, ideally I would filter through
+    # the error messages and select what I want to return
+    user.email = 'arbitrary email'
+  end
   user.password = params[:password]
+
   
   user.save
-
+  
   if user.valid?
+    location = Location.new
+    location.latitude = params[:lat]
+    location.longitude = params[:long]
+    
+    location.user_id = user.id
+    
+    location.save
     session[:user_id] = user.id 
     redirect '/plants/new'
   else

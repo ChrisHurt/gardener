@@ -1,9 +1,9 @@
 /* General Styling ~ START */
 
 :root {
-  --main-bg-color: #C96A6A;
-  /* --main-bg-color: #CA8E74; */
+  /* --main-bg-color: #C96A6A; */
   /* --main-bg-color: #DBB2A3; */
+  --main-bg-color: #CA8E74;
   --text-and-top-half-nav: #054456;
   --bottom-half-nav: #E9E4D2;
   --bottom-half-nav-hover: #D1CDBD;
@@ -196,7 +196,8 @@ body {
     background-color: var(--text-and-top-half-nav);
     color: var(--bottom-half-nav);
 	text-align: center;
-	align-content: center;
+  align-content: center;
+  align-self: flex-end;
 	padding: 7px 15px;
 	width: 100%;
     text-decoration: none;
@@ -216,7 +217,7 @@ body {
   display:flex;
   flex-direction:column;
 }
-.user_detail_errors > *, .user_detail_updates > * {
+/* .user_detail_errors > *, .user_detail_updates > * {
   
   font-size: 1em;
   line-height: 1.5em;
@@ -225,17 +226,30 @@ body {
   border-radius: 1em;
   width: auto;
   flex-shrink: 1;
+} */
+.user_detail_errors > div, .user_detail_updates > div{
+  padding: 1em;
+  margin: 1em;
+  background-color: var(--bottom-half-nav);
+  color: var(--text-and-top-half-nav);
+  border-radius: 0.5em;
+  width: 80vw;
+  margin-left: 10vw;
+  text-align: center;
 }
-.user_detail_errors > * {
+/* .user_detail_errors > * {
   background-color: orange;
 }
 .user_detail_updates > * {
   background-color: green;
   color: white;
-}
+} */
 /* My Details Styling */
 
 /* Todo page  ~ START */
+.task_complete_button:hover{
+  cursor: pointer;
+}
 .invisible-spacer {
   height: 0.25em;
 }
@@ -411,6 +425,66 @@ body {
   justify-content: center;
   align-items: center;
 }
+.quarter-width-input{
+  width: 25% !important;
+  margin-left: 2% !important;
+  margin-right: 2% !important;
+}
+.geo-wrapper{
+  width: 90% !important;
+  margin-left: 5%;
+  display: flex;
+  align-items: 'center';
+}
+.geo-wrapper2{
+  width: 90% !important;
+  /* margin-left: 5%; */
+  display: flex;
+  align-items: 'center';
+}
+.mydetails-input{
+  border-radius: 5px;
+  height: 30px;
+  width: 25%;
+	padding: 10px;
+  color: var(--text-and-top-half-nav);
+  margin: 5px 2% 15px 2%;
+  font-size: 0.8em;
+  line-height: 0.8em;
+  border: '1px solid var(--text-and-top-half-nav)';
+  outline: 'none';
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.mydetails-div{
+  border-radius: 5px;
+	height: 30px;
+	padding: 10px;
+  color: var(--text-and-top-half-nav);
+  margin: 5px 2% 15px 2%;
+  font-size: 0.8em;
+  line-height: 0.8em;
+  background-color: #FFF;
+  text-align: center;
+  cursor: pointer;
+	border: 1px solid var(--text-and-top-half-nav);
+}
+.margin-left-override{
+  margin-left: 0 !important;
+}
+.geolocation-btn{
+  border-radius: 5px;
+	height: 30px;
+	padding: 10px;
+  color: var(--text-and-top-half-nav);
+  margin: 5px 2% 15px 2%;
+  font-size: 0.8em;
+  line-height: 0.8em;
+  background-color: #FFF;
+  text-align: center;
+  cursor: pointer;
+	border: 1px solid var(--text-and-top-half-nav);
+}
   
 .loginbtn {
   height: 3em;
@@ -458,7 +532,8 @@ body {
 	top: 30px;
 	margin: 0;
 	width: 100%;
-	height: 450px;
+  /* height: 450px; */
+  height: 490px;
 	background-color: var(--bottom-half-nav);
 	border-radius: 5px;
 	z-index: 15;
@@ -567,9 +642,9 @@ body {
 }
   
 .popup-content {
-  height: 400px;
+  height: 420px;
   width: 100%;
-	overflow: hidden;
+  overflow: hidden;
 }
   
 form.sign-in {
@@ -588,8 +663,12 @@ form.sign-in.vertical-shift-signin {
   top: 30px;
 }
 form.register.vertical-shift-register {
-  top: -305px;
+  top: -310px;
 }
+form.register.vertical-shift-register2{
+  top: -280px;
+}
+
   
 form.sign-in.move-left {
 	opacity: 0;
@@ -637,7 +716,6 @@ input#submit {
 	width: 90%;
 	margin-left: 5%;
 	margin-right: 5%;
-	margin-top: 25px;
 	padding: 0;
 	cursor: pointer;
 	outline: none;
@@ -682,8 +760,16 @@ form.register input {
 .plant_image {
   object-fit: cover;
   max-height: 100%;
-   max-width: 100%;
-  /* overflow: hidden; */
+  max-width: 100%;
+}
+.plants_added{
+  background-color: var(--bottom-half-nav);
+  border-radius: 0.5em;
+  width: 80vw;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 10vw;
+  padding: 1em;
 }
 
 .plant_selected_opacity {

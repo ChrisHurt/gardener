@@ -64,6 +64,9 @@ delete '/my_plants/:id' do
     Todos = Todo.where(plant_id: params[:id])
     current_user_todos = Todos.select {|todo| todo.user_id == current_user.id}
     current_user_todos.each {|todo| todo.delete}
+
+    session[:plants_deleted] = Plant.find(params[:id]).common_name + " has been deleted."
+    session[:plants_deleted] = session[:plants_deleted].upcase
     redirect '/my_plants'
 end
 

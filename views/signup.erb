@@ -24,7 +24,7 @@
         <input type="submit" id="submit" value="Submit">
       </form>
     
-      <form action="/createaccount"  method="post" class="register <% if session[:login_error] && !logged_in?%>vertical-shift-register<% end %> <% if session[:signup_error] && !logged_in?%>vertical-shift-register move-left<% end %>">
+      <form action="/createaccount"  method="post" class="register <% if session[:login_error] && !logged_in?%>vertical-shift-register<% end %> <% if session[:signup_error] && !logged_in?%>vertical-shift-register2 move-left<% end %>">
         <% if session[:signup_error] && !logged_in?%>
         <input class= "loginlabel-error2" value="<%=session[:signup_error]%>">
         <% end %>
@@ -34,6 +34,12 @@
         <input type="text" name='email'>
         <label class= "loginlabel" for="">Password:</label>
         <input type="password" name='password'>
+        <label class= "loginlabel" for="">Location:</label>
+        <div class="geo-wrapper">
+          <input step="1" min="-180" max ="180" class="latitude margin-left-override quarter-width-input" type="number" name='lat' placeholder="latitude">
+          <input step="1" min="-180" max ="180" class="longitude quarter-width-input" type="number" name='long' placeholder="longitude">
+          <div type="button" class="quarter-width-input geolocation-btn">Current Location</div>
+        </div>
         <%# <label for="password-confirmation">Confirm Password:</label>
         <input type="password-confirmation" id="password-confirmation"> %>
         <input type="submit" id="submit" value="Create Account">
@@ -45,4 +51,5 @@
     <% session[:signup_error] = nil %>
   <% end %>
   <script src="/javascripts/loginregister.js"></script>
+  <script src="/javascripts/location.js"></script>
 </main>

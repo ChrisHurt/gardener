@@ -65,15 +65,14 @@ The application must:
 6. Quickly decided on colour palette, branding and layout of to do and myplants page. 
 7. Systematically worked on features, with frequent commits.
 
-
-## Future Planning & Workflow
-
+### Sprint 2 -- Completed 24/09/19
 - Ability for user to update password on user/edits page. 
-- Finalise frontend development for remaining pages
+- General styling Updates
 - Validate data fields on pages eg. signup/signin, add product, edit product, add comments. 
 - Add validation via Active Record & error messages
-- Check database for access on UPDATE/CREATE routes eg. Non-Current user can edit products is manually inputed.
-- Create modal to confirm deleting a product.
+- Create modal to confirm deleting a plant.
+
+## Future Planning & Workflow
 - Add more data
 
 <!-- LICENSE -->

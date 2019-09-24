@@ -8,9 +8,6 @@ post '/users/:id/update' do
     
     user = User.find_by(id: params[:id]);
 
-    
-
-
     if params[:password] != params[:confirm_password]
         session[:password_error] = 'Passwords do not match.'
     end
@@ -43,11 +40,24 @@ post '/users/:id/update' do
             @errors = user.errors.messages
         end
     end
-
-    erb :mydetails
+    redirect '/mydetails'
+    # erb :mydetails
 end
 
 post '/users/:id/settings' do
 
+    user = User.find_by(id: params[:id]);
+
+    if user.location 
+        location = user.location
+    else 
+        location = Location.new
+        location.user_id = user.id
+    end
+    location.latitude = params[:lat].to_i
+    location.longitude = params[:long].to_i
+    location.save
+
     redirect '/mydetails'
+    # erb :mydetails
 end
