@@ -53,6 +53,11 @@ The application must:
 ## Application Demo
 [Click here](https://gardeners-guide.herokuapp.com)
 
+### Demo Student User
+ - username: Chris
+ - password: 123
+
+
 
 ## Roadmap
 ### Initial Planning & Workflow
